@@ -1,5 +1,6 @@
 # Linux System Programming
 > current: File IO buffering
+> currnet: https://man7.org/linux/man-pages/man2/ioctl.2.html
 
 let's gain some momentum on low-level or system level programming. I was blocked by this knowledge when tying to implement an in-memory database.
 
