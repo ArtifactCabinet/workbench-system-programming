@@ -1,14 +1,17 @@
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdk.h>
 
 GtkWidget *window;
 GtkWidget *label;
-char label_text[1000];
+char *label_text;
 
 void
 label_append(const char *str)
 {
-    strncat(label_text, str, 10);
+    asprintf(&label_text,"%s %s",label_text,str);
     gtk_label_set_text(GTK_LABEL(label), label_text);
 }
 
@@ -28,7 +31,7 @@ activate(GtkApplication *app,
          gpointer user_data)
 {
 
-    strcpy(label_text, "Key Event -> ");
+    label_text=strdup("Key Event -> ");
 
     label = gtk_label_new(label_text);
         gtk_label_set_wrap(GTK_LABEL(label), TRUE);
