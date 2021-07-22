@@ -13,3 +13,7 @@
 
 + GLib
 + GNUlib
+
+# Fun
+
++ glob.h https://man7.org/linux/man-pages/man3/glob.3.html

@@ -12,7 +12,7 @@ main ()
 
   fd = open(file,O_RDWR | O_CREAT | O_TRUNC, (S_IRWXU | S_IRWXG | S_IRWXO) );
 
-  printf ("%d\n",fd);
+  printf ("file describer->%d\n",fd);
 
   if (fd == -1)
     errExit("open fd");
